@@ -1,0 +1,34 @@
+@startuml Paasword Manager
+title Password Manager UML Class Diagram
+
+class User {
+    - string username
+    - string password
+}
+
+
+class Admin {
+}
+
+User <|-- Admin
+
+class PasswordEntry {
+    - string encryptpwd
+    - string decryptpwd
+    - string dateCreated
+    - string dateLastUpdated
+}
+
+
+class WebsiteappGamesEntry {
+    - string websiteName
+    - string websiteURL
+    - string appsname
+    -string gamesname
+    -string games
+    
+}
+
+PasswordEntry <|-- WebsiteappGamesEntry
+
+@enduml
